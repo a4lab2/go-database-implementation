@@ -19,3 +19,18 @@
 // 		tx.Commit()
 // 	}
 // }
+
+// TO-CHECK:DEEB ORM
+
+// import "crypto/sha256"
+h := sha256.New()
+io.WriteString(h, "His money is twice tainted: 'taint yours and 'taint mine.")
+fmt.Printf("% x", h.Sum(nil))
+// import "crypto/sha1"
+h := sha1.New()
+io.WriteString(h, "His money is twice tainted: 'taint yours and 'taint mine.")
+fmt.Printf("% x", h.Sum(nil))
+// import "crypto/md5"
+h := md5.New()
+io.WriteString(h, "xasd")
+fmt.Printf("%x", h.Sum(nil))
